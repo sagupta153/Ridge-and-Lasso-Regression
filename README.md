@@ -3,7 +3,7 @@
 
 ## Table of Contents
 * [General Info](#general-information)
-* [XModelling Process](#xmodelling process)
+* [Modelling Process](#modelling-process)
 * [Conclusions](#conclusions)
 * [Technologies Used](#technologies-used)
 * [Acknowledgements](#acknowledgements)
