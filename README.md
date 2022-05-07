@@ -3,7 +3,7 @@
 
 ## Table of Contents
 * [General Info](#general-information)
-* [Modelling Process](#modelling-process)
+* [Regression Modelling](#regression-modelling)
 * [Conclusions](#conclusions)
 * [Technologies Used](#technologies-used)
 * [Acknowledgements](#acknowledgements)
@@ -92,7 +92,7 @@
  78. SaleType: Type of sale
  79. SaleCondition: Condition of sale
 
-## XModelling Process
+## Regression Modelling
 - After EDA and Data Cleaning, the number of features became 234. Of these 234 features, 17 were mostly single-value features
 
 - During EDA it was also determined that there were a few outliers in the Target variable, Sales Price. There were 56 outliers
