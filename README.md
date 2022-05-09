@@ -93,28 +93,30 @@
  79. SaleCondition: Condition of sale
 
 ## Regression Modelling
-- After EDA and Data Cleaning, the number of features became 234. Of these 234 features, 17 were mostly single-value features
-
+- After EDA and Data Cleaning, the number of features became 230. Of these 230 features, 12 were mostly single-value features
+- Multi-collinearity study using correlation values revealed 6 highly correlated features. These were removed too
 - During EDA it was also determined that there were a few outliers in the Target variable, Sales Price. There were 56 outliers
 
-- Regression was performed both on the complete set of 1460 records, as well as without the outliers.
-- Regression was performed with all the 234 features, as well as without the single value features.
+- Regression was performed both on the remaining set of 1404 records, i.e, without the outliers.
+- Regression was performed with 212 features.
 - Analysis involved Ordinary Linear Regression using both scikit-learn as well as stats-models linear regression modules
+- There was some unknown error in using scikit-learn LinearRegression Module for predicting Target variable of Test Data
 - Advanced Regression (Ridge and Lasso) was done using Ridge and Lasso modules of scikit-learn. 
 
 ## Conclusions
 > A preliminary visual analysis and domain understanding revealed a lot of inter-dependency among some variables.
 
 > The main features that are important for predicting the sales price (common to both Ridge and Lasso models):
- 1. OverallQual: The overall material and finish of the house
- 2. TotRmsAbvGrd: Total rooms above grade (not including bathrooms)
- 3. GrLivArea: Above grade (ground) living area square feet
+ 1. 1stFlrSF: Square Feet area of 1st Floor
+ 2. 2ndFlrSF: Square Feet area of 2nd Floor
+ 3. TotRmsAbvGrd: Total rooms above grade (not including bathrooms)
  4. GarageCars: Size of garage in car capacity
- 5. NoRidge_Nbrhood: Northridge Neighborhood - Physical locations within Ames city limits
- 6. StoneBr_Nbrhood: Stone Brook Neighborhood - Physical locations within Ames city limits
- 7. WdShngl_RoofMatl: Wood Shingles Roof Material
+ 5. OverallCond: Overall Condition of the house
+ 6. NoRidge_Nbrhood: Northridge Neighborhood - Physical locations within Ames city limits
+ 7. StoneBr_Nbrhood: Stone Brook Neighborhood - Physical locations within Ames city limits
+ 8. NridgHt_Nbrhood: Northridge Heights Neighborhood - Physical locations within Ames city limits
 
-> Ridge and Lasso are able to describe about 86% and 88% variance, respectively, in the Property Sales price 
+> Ridge and Lasso are able to describe about 86% variance, with a Root Mean Square Error of 7% 
 
 ## Technologies Used
 - operating system - microsoft windows - version Windows 11 Home edition
